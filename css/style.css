@@ -1,0 +1,407 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+html, body{margin: 0; padding: 0;}
+h1,h2,h3,h4,h5,h6, p{margin: 0;}
+ol,ul{list-style: none; padding: 0; margin: 0;}
+a, a:hover{text-decoration: none;}
+
+header{
+    width: 100%; height: 60px; background: #000028;
+    padding: 0 40px; 
+    display: flex; flex-wrap: wrap; position: relative;
+    align-items: center; justify-content: space-between;
+    
+}
+
+header .logo{}
+header .logo img{height: 30px; line-height: 60px;}
+
+header nav{}
+header nav ul{display: flex;}
+header nav ul li{padding: 0 15px;}
+header nav ul li a{color: #fffffd; font-weight: lighter; font-size: 16px; display: block; position: relative;}
+header nav ul li a:after{
+    position: absolute; content: ""; width: 0; height: 3px; background: #fffffd;
+    bottom: -15px; left: 0; opacity: 0;
+    transition: opacity 0.5s , width 0.5s;
+}
+header nav ul li a:hover:after{
+    opacity: 1; width: 100%;
+}
+
+header .my_page ul li:last-child{
+    height: 20px;
+    display: none;
+}
+
+header .my_page{}
+header .my_page ul{display: flex;}
+header .my_page ul li{padding: 0 15px;}
+header .my_page ul li:last-child{padding-right: 0;}
+header .my_page ul li a{display: block;}
+header .my_page ul li a img{
+    height: 15px; width: 15px; display: block; filter: invert(85%);
+    transition: filter 0.5s;
+}
+header .my_page ul li a img:hover{filter: invert(100%);}
+
+main{width: 100%; height: 100vh; overflow: hidden;}
+main .banner{position: relative; width: 100%; height: 100vh; }
+main .movie_space{
+    position: absolute; height: 160%; width: 160%; top: 50%;
+    left: 50%; transform: translate(-50%, -50%); 
+}
+main .mouseIcon{
+    position: absolute; bottom: 40px; left: 50%;
+    transform: translateX(-50%);
+}
+main .mouseIcon img{height: 55px;}
+
+
+
+section .titleSec{
+}
+
+section .titleSec h3{
+    font-size: 24px; color: #555;
+    font-weight: normal; text-align: center;
+    padding-bottom: 20px;
+}
+section .titleSec p{
+    font-size: 16px; color: #555;
+    font-weight: normal; text-align: center;
+    padding-bottom: 40px;
+}
+
+section#newArrivals{
+    width: 1200px; margin: 0 auto; 
+    padding: 100px 10px 80px;
+}
+section#newArrivals .box{display: flex; flex-wrap: wrap;}
+section#newArrivals .box .firstBox{
+    width: calc(50% - 20px); height: 280px;
+    background-size: cover; background-position: 50% 50%;
+    background-image: url(../images/newArrivalBg.jpg);
+    margin: 0 10px;
+}
+section#newArrivals .box .firstBox .txtPart{
+    color: #ccc; padding: 100px 20px;
+
+}
+section#newArrivals .box .firstBox .txtPart h3{
+    font-size: 24px; font-weight: normal; padding-bottom: 5px;
+}
+section#newArrivals .box .firstBox .txtPart p{
+    font-size: 14px; width: 445px;
+}
+section#newArrivals .box .boxSec{width: calc(25% - 20px); margin: 0 10px 10px;}
+section#newArrivals .box .boxSec .content{
+    height: 280px; width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+section#newArrivals .box .boxSec .content .dark{
+    width: 100%; height: 100%; background: rgba(0,0,0,0.4);
+    padding: 100px 0 95px; opacity: 0; transition: opacity 0.5s;
+}
+section#newArrivals .box .boxSec .content .dark:hover{
+    opacity: 1;
+}
+section#newArrivals .box .boxSec .content .dark .subTitle{
+    color: #fff;  text-align: center;
+}
+section#newArrivals .box .boxSec .content .dark .subTitle h3{
+    font-size: 16px; margin-bottom: 5px; font-weight: normal;
+}
+section#newArrivals .box .boxSec .content .dark .subTitle p{
+    font-size: 14px;  font-weight: normal;
+}
+section#newArrivals .box .boxSec .content .dark .subTitle button{
+    margin-top: 5px; width: 80px; height: 30px;
+    border: none; font-size: 13px; color: #555; cursor: pointer;
+    background: #fff; transition: background 0.5s;
+}
+section#newArrivals .box .boxSec .content .dark .subTitle button:hover{
+    background: #ddd;
+}
+section#Match{
+    width: 100%;padding: 0 40px 80px;
+}
+section#Match .En_Box{
+  display: flex; justify-content: space-between;
+  align-items: center;
+}
+.En_Box .cont{
+   margin: 0 10px;  width: calc(100% / 3 - 10px); 
+   
+   
+}
+.En_Box .cont img{
+    width: 100%; height: calc((100% - 120px) / 3);
+}
+section#Match .En_Box .cont .bottomBox{
+    margin: 20px 0; background: #fff;
+    text-align: center; padding: 30px 0;
+    background: #e2e2e2; 
+}
+section#Match .En_Box .cont .bottomBox h3{
+    font-weight: normal; color: #555; font-size: 17px;
+    margin-bottom: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+section#Match .En_Box .cont .bottomBox p{
+    font-weight: lighter; background: #e2e2e2; font-size: 14px;
+    margin-bottom: 13px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+section#Match .En_Box .cont .bottomBox button{
+    width: 140px; height: 40px; color: #fff;
+    font-size: 15px; font-weight: normal; background: #555;
+    border: none; cursor: pointer; transition: background 0.5s;
+}
+section#Match .En_Box .cont .bottomBox button:hover{
+    background: #000028;
+}
+section#RunPuma{
+    width: 1200px;
+    margin: 0 auto; padding: 75px 100px;
+    display: flex;
+}
+section#RunPuma .Thebox{height: 260px;}
+.Thebox:first-child{
+    background: #faa;
+    width: 50%; background-image: url(../images/run\ puma.jpg);
+    background-size: cover; background-position: 50% 50%;
+}
+.Thebox:last-child{
+    width: 50%; padding: 15px 30px; background: #000028;
+}
+ .Thebox:last-child h3{font-size: 20px; font-weight: bold; color: #fff; padding-bottom: 10px;}
+ .Thebox:last-child p{font-size: 13px; font-weight: lighter; color: #fff; padding-bottom: 20px;}
+section#RunPuma .Thebox:last-child button{
+    width: 120px; height: 30px; border: 1px solid #fff;
+    color: #fff; background: transparent; cursor: pointer;
+   transition: background 0.5s;
+   
+}
+section#RunPuma .Thebox:last-child button:hover{
+    background: rgba(255,255,255,0.3);
+   
+}
+section#Newyear{
+    width: 100%;padding: 100px 40px 80px;
+    margin-top: 100px;
+}
+section#Newyear{
+    width: 100%;padding: 0 40px 80px;
+}
+section#Newyear .En_Box2{
+  display: flex; justify-content: space-between;
+  align-items: center;
+   
+}
+.En_Box2 .cont{
+   margin: 0 10px;  width: calc(100% / 3 - 10px); 
+   
+   
+}
+.En_Box2 .cont img{
+    width: 100%; height: calc((100% - 120px) / 3);
+}
+section#Newyear .En_Box2 .cont .bottomBox{
+    margin: 20px 0; background: #fff;
+    text-align: center; padding: 30px 0;
+    background: #e2e2e2; 
+}
+section#Newyear .En_Box2 .cont .bottomBox h3{
+    font-weight: normal; color: #555; font-size: 17px;
+    margin-bottom: 5px; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+ .En_Box2 .cont .bottomBox p{
+    font-weight: lighter; background: #e2e2e2; font-size: 14px;
+    margin-bottom: 13px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+ .En_Box2 .cont .bottomBox button{
+    width: 140px; height: 40px; color: #fff;
+    font-size: 15px; font-weight: normal; background: #555;
+    border: none; cursor: pointer; transition: background 0.5s;
+}
+section#Newyear .En_Box2 .cont .bottomBox button:hover{
+    background: #000028;
+}
+
+footer{
+    background-image: url(../images/footer_bg.jpg);
+    height: 330px; width: 100%;
+    padding: 40px; overflow: hidden;
+}
+footer .topSec{
+    display: flex;
+}
+footer .topSec .logo{
+    filter: invert(50.2%) brightness(2);
+
+}
+footer .topSec .logo{width: 300px;}
+footer .topSec .logo > img{height: 50px;}
+footer .topSec .middle{
+    width: 50%; padding-bottom: 20px; 
+    position: relative; color: #fff;
+    border-bottom: 0.5px solid rgb(196, 188, 188);
+    padding-right: 30px;
+}
+footer .topSec .about{
+    padding-right: 0;
+}
+
+footer .topSec .middle h2{
+    border-bottom: 1px solid #eee; font-size: 16px;
+    font-weight: normal; 
+}
+footer .topSec .middle .flex{display: flex;}
+footer .topSec .middle ul{width: 50%; padding: 20px 0;}
+footer .topSec .middle ul li{}
+footer .topSec .middle ul li a{font-size: 14px; color: #e2e2e2;}
+
+footer .topSec .leftLogo{width: 300px; position: relative;}
+footer .topSec .leftLogo img{height: 250px; position: absolute; bottom: -100px; left: 30px;}
+
+footer .bottomSec{
+    color: #e2e2e2;
+    text-align: center;padding: 20px 0; font-size: 14px;
+}
+
+@media(max-width:991px){ /*테블릿*/
+
+    /*header*/
+    header nav{
+        position: absolute;
+        top: 60px; z-index: 3;
+        left: 50%; transform: translateX(-50%);
+        background: rgba(0,0,0,0.7);
+        width: 100%;
+        max-height: 0; overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    header nav.active{
+        max-height: 450px;
+    }
+    header nav ul{
+        flex-direction: column;
+    }
+    header nav ul li{margin: 15px 0; transition: color 0.5s;}
+    header nav ul li a{transition: color 0.5s;}
+    header nav ul li:hover a{
+        color: yellow;
+    }
+    header nav ul li a{font-size: 15px; text-transform: uppercase;text-align: center;}
+    header .my_page ul li:last-child{display: block;}
+    header nav ul li a:after{display: none;}
+    main .movie_space{width: 350%; height: 350%;}
+
+    
+    section#newArrivals{width: 100%;}
+    section#newArrivals .box .firstBox{
+        width: calc(100% - 20px);  margin-bottom: 10px;
+    }
+    section#newArrivals .box .boxSec:nth-child(9){display: none;}
+    section#newArrivals .box .boxSec:last-child{display: none;}
+
+    section#Match{
+        width: 100%;
+    }
+
+
+    section#Match .En_Box .cont{
+        width: 50%;
+    }
+    section#Match .En_Box .cont:last-child{
+        display: none;
+    }
+    section#Match .En_Box .cont img{
+        width: 100%; height: calc((100% - 120px) / 2);
+    }
+  
+    section#RunPuma{
+        width: 100%; padding: 10px;
+    }
+    section#RunPuma .Thebox:last-child button{
+        width: 100%;
+    }
+
+    section#Newyear{
+        width: 100%;
+    }
+
+    section#Newyear .En_Box2 .cont{
+        width: 50%;
+    }
+    section#Newyear .En_Box2 .cont:last-child{
+        display: none;
+    }
+    section#Newyear .En_Box2 .cont img{
+        width: 100%; height: calc((100% - 120px) / 2);
+    }
+
+
+}
+@media(max-width:767px){ /*모바일*/
+    header .my_page ul li{display: none;}
+    section#newArrivals .box .boxSec{width: calc(50% - 20px);}
+
+    section#newArrivals .box .boxSec:nth-child(9){display: block;}
+    section#newArrivals .box .boxSec:last-child{display: block;}
+
+    section#Match .En_Box .cont{
+        width: 100%;
+    }
+    section#Match .En_Box .cont img{
+        width: 100%; height: auto;
+    }
+    section#Match .En_Box .cont:last-child{
+        display: block;
+    }
+    section#Match .En_Box{
+        flex-direction: column; flex-wrap: wrap;
+    }
+    
+    section#RunPuma{
+        display: block;
+    }
+    section#RunPuma .Thebox{
+        width: 100%; padding: 20px; 
+    }
+    section#RunPuma .Thebox h3{
+        font-size: 30px;
+    }
+    section#RunPuma .Thebox p{
+        font-size: 15px;
+    }
+    section#RunPuma .Thebox:last-child button{
+       height: 40px;
+    }
+
+    section#Newyear .En_Box2 .cont{
+        width: 100%;
+    }
+    section#Newyear .En_Box2 .cont img{
+        width: 100%; height: auto;
+    }
+    section#Newyear .En_Box2 .cont:last-child{
+        display: block;
+    }
+    section#Newyear .En_Box2{
+        flex-direction: column; flex-wrap: wrap;
+    }
+}
